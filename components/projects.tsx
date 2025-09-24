@@ -1,3 +1,5 @@
+"use client"
+
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -6,51 +8,87 @@ import { ExternalLink, Github } from "lucide-react"
 export function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Sapin de Noël",
       description:
-        "A full-stack e-commerce solution built with React, TypeScript, and Symfony. Features include user authentication, product catalog, shopping cart, and payment integration.",
-      technologies: ["React", "TypeScript", "Symfony", "MySQL", "PHP"],
-      image: "/modern-ecommerce-interface.png",
-      liveUrl: "#",
-      githubUrl: "#",
+        "Une représentation festive d'un sapin de Noël créée uniquement avec du HTML et du CSS, démontrant des compétences en structuration et stylisation front-end.",
+      technologies: ["HTML", "CSS", "Design"],
+      image: "/assets/sapin-de-noel.png",
+      liveUrl: "https://enismermer.github.io/Sapin_de_Noel/Sapin%20de%20Noel/index.html",
+      githubUrl: "https://github.com/enismermer/sapin-de-noel"
     },
     {
-      title: "Task Management App",
+      title: "Tap Taupe",
       description:
-        "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      technologies: ["React", "Firebase", "JavaScript", "CSS"],
-      image: "/task-management-dashboard.png",
-      liveUrl: "#",
-      githubUrl: "#",
+        "Un jeu interactif développé avec jQuery, où le joueur doit taper sur des taupes qui apparaissent de manière aléatoire pour accumuler des points.",
+      technologies: ["jQuery", "JavaScript", "Front-End"],
+      image: "/assets/tap-taupe.png",
+      liveUrl: "https://enismermer.github.io/tap_taupe_jQuery/",
+      githubUrl: "https://github.com/enismermer/tap_taupe_jQuery"
     },
     {
-      title: "Portfolio Website",
+      title: "Electron Desktop - API Amiibo",
       description:
-        "A responsive portfolio website showcasing modern design principles and smooth animations. Built with performance and accessibility in mind.",
-      technologies: ["HTML", "CSS", "JavaScript", "Figma"],
-      image: "/modern-portfolio-website.png",
+        "Une application desktop développée avec Electron pour consulter et afficher les données des figurines Amiibo via une API publique.",
+      technologies: ["Electron.js", "JavaScript", "API", "Desktop"],
+      image: "/assets/electron-api-desktop.png",
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/enismermer/Electron_appDesktop_apiAmiibo"
     },
     {
-      title: "API Documentation Tool",
+      title: "Jukebox",
       description:
-        "A comprehensive API documentation and testing tool that helps developers understand and interact with REST APIs efficiently.",
-      technologies: ["PHP", "Symfony", "MySQL", "Postman"],
-      image: "/api-documentation-interface.jpg",
+        "Une application web pour créer et gérer des playlists musicales avec un back-end Symfony et une interface Figma.",
+      technologies: ["Symfony", "PHP", "Figma"],
+      image: "/assets/jukebox.png",
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/enismermer/Symfony-jukebox"
     },
+    {
+      title: "Bookbox",
+      description:
+        "Une application mobile et une API back-end pour gérer des livres avec QR code, développée avec Symfony et React Native.",
+      technologies: ["Symfony", "PHP", "API", "React Native", "Postman", "Figma"],
+      image: "/assets/bookbox.png",
+      liveUrl: "#",
+      githubUrl: "https://github.com/enismermer/React_Native_Bookbox"
+    },
+    {
+      title: "API Météo",
+      description:
+        "Une application web réalisée avec Vue.js pour afficher les prévisions météo d’une ville en temps réel grâce à l’API OpenWeatherMap.",
+      technologies: ["Vue.js", "API", "Front-End"],
+      image: "/assets/api-meteo.png",
+      liveUrl: "https://api-meteo-smoky.vercel.app/",
+      githubUrl: "https://github.com/enismermer/APImeteo_Vue.js"
+    },
+    {
+      title: "My-Personnality",
+      description:
+        "Une interface interactive en React.js inspirée de l'univers Mario, mettant en avant ma personnalité.",
+      technologies: ["React.js", "JavaScript", "UX/UI", "Material-UI", "Animation", "Canva"],
+      image: "/assets/my-personnality.png",
+      liveUrl: "#",
+      githubUrl: "https://github.com/enismermer/personnality"
+    },
+    {
+      title: "Naymo",
+      description:
+        "Naymo est une plateforme dédiée aux commerces de proximité, développée avec React.js et Firebase, alliant front-end et back-end.",
+      technologies: ["React.js", "JavaScript", "TypeScript", "Firebase", "Tailwind"],
+      image: "/assets/naymo.png",
+      liveUrl: "https://naymo-mvp-v1.vercel.app/",
+      githubUrl: "https://github.com/enismermer/naymo"
+    }
   ]
 
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-balance">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-balance">Projets réalisés</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
+            {projects.slice().reverse().map((project, index) => (
               <Card
                 key={index}
                 className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 group hover:bg-card/70 transition-all duration-300"
@@ -73,14 +111,22 @@ export function Projects() {
                     ))}
                   </div>
                   <div className="flex gap-3">
-                    <Button size="sm" className="flex-1">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </Button>
-                    <Button variant="outline" size="sm" className="flex-1 bg-transparent">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </Button>
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition
+                        ${project.liveUrl === "#" ? "bg-gray-400 cursor-not-allowed" : "bg-primary text-white hover:bg-primary/80"}`}
+                      onClick={(e) => {
+                        if (project.liveUrl === "#") e.preventDefault()
+                      }}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Démo
+                    </a>
+                    <a href={project.githubUrl} target="_blank" className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md border border-border text-foreground hover:bg-card/10 transition">
+                      <Github className="w-4 h-4" />
+                        Code
+                    </a>
                   </div>
                 </div>
               </Card>

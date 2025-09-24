@@ -36,9 +36,9 @@ export function Navigation() {
 
   const navItems = [
     { id: "hero", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "projects", label: "Projects" },
+    { id: "about", label: "A propos" },
+    { id: "skills", label: "Compétences" },
+    { id: "projects", label: "Projets" },
     { id: "contact", label: "Contact" },
   ]
 
@@ -46,7 +46,7 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold text-primary">{"<Dev />"}</div>
+          <div className="text-xl font-bold text-primary">{"<Enis />"}</div>
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <Button
@@ -54,7 +54,7 @@ export function Navigation() {
                 variant={activeSection === item.id ? "default" : "ghost"}
                 size="sm"
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm"
+                className="text-sm cursor-pointer"
               >
                 {item.label}
               </Button>

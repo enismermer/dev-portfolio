@@ -27,13 +27,13 @@ export function Skills() {
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      Frontend: "bg-primary/20 text-primary border-primary/30",
-      Backend: "bg-accent/20 text-accent border-accent/30",
-      Database: "bg-chart-2/20 text-chart-2 border-chart-2/30",
-      Design: "bg-chart-3/20 text-chart-3 border-chart-3/30",
-      API: "bg-chart-4/20 text-chart-4 border-chart-4/30",
-      Planning: "bg-chart-5/20 text-chart-5 border-chart-5/30",
-      "Project Management": "bg-primary/20 text-primary border-primary/30",
+      Frontend: "bg-green-500/20 text-green-600 border-green-500/30",
+      Backend: "bg-red-500/20 text-red-600 border-red-500/30",
+      Database: "bg-blue-500/20 text-blue-600 border-blue-500/30",
+      Design: "bg-purple-500/20 text-purple-600 border-purple-500/30",
+      API: "bg-orange-500/20 text-orange-600 border-orange-500/30",
+      Planning: "bg-yellow-500/20 text-yellow-600 border-yellow-500/30",
+      "Project Management": "bg-cyan-500/20 text-cyan-600 border-cyan-500/30",
     }
     return colors[category as keyof typeof colors] || "bg-muted text-muted-foreground"
   }
@@ -42,11 +42,11 @@ export function Skills() {
     <section id="skills" className="py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-balance">Technical Skills</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-balance">Compétences techniques</h2>
 
           <div className="grid lg:grid-cols-2 gap-8">
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50">
-              <h3 className="text-2xl font-semibold mb-6 text-primary">Core Technologies</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-primary">Technologies principales</h3>
               <div className="flex flex-wrap gap-3">
                 {technicalSkills.map((skill) => (
                   <Badge
@@ -61,7 +61,7 @@ export function Skills() {
             </Card>
 
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50">
-              <h3 className="text-2xl font-semibold mb-6 text-accent">Tools & Workflow</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-accent">Outils & Workflow</h3>
               <div className="flex flex-wrap gap-3">
                 {otherSkills.map((skill) => (
                   <Badge
@@ -78,7 +78,7 @@ export function Skills() {
 
           <div className="mt-12 text-center">
             <p className="text-muted-foreground text-lg">
-              Always learning and exploring new technologies to stay at the forefront of development
+              Toujours en apprentissage et à l’affût de nouvelles technologies pour rester à la pointe du développement.
             </p>
           </div>
         </div>
