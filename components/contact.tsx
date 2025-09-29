@@ -12,6 +12,7 @@ import { Mail, MapPin, Phone, Send } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 import { format } from "date-fns"
 
+// Page Contact
 export function Contact() {
   const [formData, setFormData] = useState({
     name: "",
