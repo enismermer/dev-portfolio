@@ -67,7 +67,7 @@ export function Projects() {
         "Une interface interactive en React.js inspirée de l'univers Mario, mettant en avant ma personnalité.",
       technologies: ["React.js", "JavaScript", "UX/UI", "Material-UI", "Animation", "Canva"],
       image: "/assets/my-personnality.png",
-      liveUrl: "#",
+      liveUrl: "https://personnality.vercel.app/",
       githubUrl: "https://github.com/enismermer/personnality"
     },
     {
