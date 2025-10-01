@@ -6,7 +6,7 @@ import { ReactTyped } from "react-typed"
 
 export function Hero() {
   const scrollToAbout = () => {
-    const aboutSection = document.getElementById("about")
+    const aboutSection = document.getElementById("projects")
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth" })
     }

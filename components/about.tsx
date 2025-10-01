@@ -24,7 +24,7 @@ export function About() {
             <div>
               <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">Développeur passionné</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed">
                   Je suis un développeur full-stack motivé, spécialisé dans la création 
                   d’applications web modernes et performantes. Mon objectif est de concevoir des solutions utiles, accessibles et innovantes.
                 </p>
@@ -39,25 +39,25 @@ export function About() {
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full animate-twinkle"></div>
-                <span className="text-muted-foreground">{">"} 2 ans d’expérience en développement</span>
+                <span className="text-muted-foreground">2 ans d’expérience en développement</span>
               </div>
               <div className="flex items-center gap-4">
                 <div
                   className="w-2 h-2 bg-accent rounded-full animate-twinkle"
                   style={{ animationDelay: "0.5s" }}
                 ></div>
-                <span className="text-muted-foreground">{">"} Plus de 10 projets réalisés</span>
+                <span className="text-muted-foreground">Plus de 10 projets réalisés</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full animate-twinkle" style={{ animationDelay: "1s" }}></div>
-                <span className="text-muted-foreground">{">"} Expertise full-stack (Frontend & backend)</span>
+                <span className="text-muted-foreground">Expertise full-stack (Frontend & backend)</span>
               </div>
               <div className="flex items-center gap-4">
                 <div
                   className="w-2 h-2 bg-accent rounded-full animate-twinkle"
                   style={{ animationDelay: "1.5s" }}
                 ></div>
-                <span className="text-muted-foreground">{">"} Pratiques modernes & collaboration en équipe</span>
+                <span className="text-muted-foreground">Pratiques modernes & collaboration en équipe</span>
               </div>
             </div>
           </div>
